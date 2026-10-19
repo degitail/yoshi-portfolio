@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>漫画原稿の吹き出し翻訳ツール | yoshi Portfolio</title>
+  <meta name="description" content="漫画ページの吹き出しを自動検出し、OCRと英訳を経て英文の吹き出しへ差し替えるローカルWebアプリ。PC内のモデルだけで動き、ブラウザ上で手直しして原寸PNGで保存できる。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="yoshi Portfolio">
+  <meta property="og:title" content="漫画原稿の吹き出し翻訳ツール | yoshi Portfolio">
+  <meta property="og:description" content="漫画の吹き出しを検出・OCR・英訳して差し替える、ローカル動作のWebアプリ。">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>try{if(!sessionStorage.getItem('introSeen')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro-pending')}catch(e){}</script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">degitail</a>
+    <button class="nav-burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav">
+      <a href="index.html" class="nav-link">Top</a>
+      <a href="works.html" class="nav-link active">Works</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="about.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="detail-inner">
+    <div class="detail-item">
+      <div class="detail-visual">
+        <div class="visual photo">
+          <video src="assets/manga-translate.mp4" poster="assets/manga-translate-thumb.jpg" autoplay muted loop playsinline controls aria-label="漫画原稿の吹き出し翻訳ツールのデモ動画"></video>
+          <span class="num serif">04</span>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="work-meta">Work 04 — AI / Localization</div>
+        <h2>漫画原稿の吹き出し翻訳ツール</h2>
+        <div class="role">個人開発（企画・認識パイプライン設計・編集UI実装）</div>
+        <p>日本語の漫画ページを読み込むと、吹き出しを自動で検出し、台詞を読み取って英訳し、横組みの吹き出しに描き直すローカルWebアプリです。認識結果は下書きとして扱い、台詞の修正・移動・リサイズ・文字サイズの調整をブラウザ上で行ったうえで、元画像と同じ解像度のPNGとして保存できます。</p>
+        <p>認識はPC内のモデルだけで完結させました。吹き出し検出、漫画に特化したOCR、日英翻訳の3段をつなぎ、APIキー不要・オフラインで動作します。設定を切り替えればOpenAI APIによる認識にも対応し、翻訳の段だけを別のモデルへ差し替えられる構成にしています。</p>
+        <p>編集画面では、吹き出しを用紙の外まではみ出して配置でき、保存時には自動でトリミングされます。しっぽの付け外しと向きの調整にも対応し、楕円としっぽを一つの輪郭で描くことで境目に線が残らないようにしました。</p>
+        <ul class="feat-list">
+          <li>吹き出し検出 → OCR → 英訳をローカルで自動処理</li>
+          <li>APIキー不要・オフライン動作（OpenAI API版にも切替可能）</li>
+          <li>台詞の修正、ドラッグでの移動、ハンドルでのリサイズ</li>
+          <li>文字サイズの調整と横組み英文での描き直し</li>
+          <li>用紙外へのはみ出し配置と保存時の自動トリミング</li>
+          <li>しっぽのON/OFFと向きの調整（輪郭を一体で描画）</li>
+          <li>元画像と同じ解像度でのPNG保存</li>
+          <li>座標と英訳をまとめたJSONの読み込みにも対応</li>
+        </ul>
+        <div class="tech-row">
+          <span class="tech">Python</span>
+          <span class="tech">JavaScript</span>
+          <span class="tech">HTML5 Canvas</span>
+          <span class="tech">Transformers</span>
+          <span class="tech">PyTorch</span>
+          <span class="tech">manga-ocr</span>
+          <span class="tech">opus-mt（MarianMT）</span>
+          <span class="tech">OpenAI API（任意）</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="detail-pager">
+  <a href="work-persona.html">&larr; Prev</a>
+  <a href="works.html" class="back">All Works</a>
+  <a href="work-shorts.html">Next &rarr;</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">yoshi</a>
+    <nav class="footer-nav">
+      <a href="index.html">Top</a>
+      <a href="works.html">Works</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>Individual Developer Portfolio</span>
+    <span>&copy; 2026 yoshi. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>

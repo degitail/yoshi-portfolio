@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yoshi | Portfolio — 個人開発の作品集</title>
-  <meta name="description" content="yoshiの個人ポートフォリオ。AI・画像処理・地理空間分析・ブラウザ拡張機能など、幅広い領域で開発したツール・プロダクトを紹介します。">
+  <title>ケイのポートフォリオ</title>
+  <meta name="description" content="ケイの個人ポートフォリオ。AI/機械学習を活用した幅広い領域のツール・プロダクトを紹介します。">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="yoshi Portfolio">
+  <meta property="og:site_name" content="kei Portfolio">
   <meta property="og:title" content="yoshi | Portfolio — 個人開発の作品集">
-  <meta property="og:description" content="AI・画像処理・地理空間分析・ブラウザ拡張機能など、幅広い領域で開発したツール・プロダクトを紹介します。">
+  <meta property="og:description" content="AI/機械学習を活用した幅広い領域のツール・プロダクトを紹介します。">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -19,7 +19,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "yoshi",
+    "name": "kei",
     "jobTitle": "Individual Developer",
     "description": "AI・画像処理・地理空間分析・ブラウザ拡張機能など、幅広い領域でツールを開発する個人開発者。",
     "knowsAbout": ["Python", "JavaScript", "LLM", "RAG", "Computer Vision", "Geospatial Analysis"]
@@ -31,7 +31,7 @@
 <!-- HEADER -->
 <header>
   <div class="header-inner">
-    <a href="index.html" class="logo">yoshi<span class="dot">.</span></a>
+    <a href="index.html" class="logo">degitail</a>
     <button class="nav-burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span>
     </button>
@@ -46,12 +46,12 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="eyebrow">yoshi — Individual Developer</div>
-  <h1>アイデアを<b>即実装！</b></h1>
-  <p>企画から設計・実装・配布までを一人で担当し、AI・画像処理・地理空間分析・ブラウザ拡張機能など、幅広い領域でツールを開発しています。ここでは、これまで手がけた作品の一部を紹介します。</p>
+  <div class="eyebrow">ケイ — Individual Developer</div>
+  <h1>アイデアを<b>即実装</b></h1>
+  <p>AI・画像処理・地理空間分析・ブラウザ拡張機能など、幅広い領域でツールを開発しています。ここでは手がけた作品の一部を紹介します。</p>
   <div class="hero-actions">
-    <a href="works.html" class="btn btn-dark">作品を見る</a>
-    <a href="about.html" class="btn btn-outline">About</a>
+    <span class="crumble"><a href="works.html" class="btn btn-dark">作品を見る</a></span>
+    <span class="crumble"><a href="about.html" class="btn btn-outline">About</a></span>
   </div>
 </section>
 
@@ -104,13 +104,16 @@
         </div>
       </a>
 
-      <a href="work-execbot.html" class="work-card reveal">
-        <div class="visual p5"><span class="num serif">04</span></div>
-        <div class="tag-line">AI Roleplay</div>
-        <h3>AI重役ロールプレイボット</h3>
-        <p class="desc">発言記録を再現し、提案に鋭い質問を投げるプレゼン練習ツール。</p>
+      <a href="work-manga.html" class="work-card reveal">
+        <div class="visual photo">
+          <img src="assets/manga-translate-thumb.jpg" alt="漫画原稿の吹き出し翻訳ツール" loading="lazy" decoding="async">
+          <span class="num serif">04</span>
+        </div>
+        <div class="tag-line">AI / Localization</div>
+        <h3>漫画原稿の吹き出し翻訳ツール</h3>
+        <p class="desc">吹き出しを検出・OCR・英訳し、英文の吹き出しへ差し替えるローカルWebアプリ。</p>
         <div class="tech-row">
-          <span class="tech">Claude API</span><span class="tech">Prompt Eng.</span>
+          <span class="tech">Python</span><span class="tech">Canvas</span>
         </div>
       </a>
 
@@ -124,16 +127,16 @@
         </div>
       </a>
 
-      <a href="work-pet.html" class="work-card reveal">
+      <a href="work-aquarium.html" class="work-card reveal">
         <div class="visual photo">
-          <img src="assets/pet-frame.jpg" alt="視聴ナッジ用Chrome拡張機能 - 画面に現れるペット" loading="lazy" decoding="async">
+          <img src="assets/aquarium-thumb.png" alt="リアルタイムで動く水槽ディスプレイ" loading="lazy" decoding="async">
           <span class="num serif">06</span>
         </div>
-        <div class="tag-line">Browser Extension</div>
-        <h3>視聴ナッジ用Chrome拡張機能</h3>
-        <p class="desc">見すぎるとペットが現れる、デジタルウェルビーイング系拡張。</p>
+        <div class="tag-line">Interactive Art / Web App</div>
+        <h3>実写素材でつくるインタラクティブ水槽システム</h3>
+        <p class="desc">実写の魚やサンゴを配置し、物理シミュレーションで泳ぎや水中表現を再現したインタラクティブ水槽。</p>
         <div class="tech-row">
-          <span class="tech">Chrome Ext.</span><span class="tech">JavaScript</span>
+          <span class="tech">HTML5 Canvas</span><span class="tech">JavaScript</span><span class="tech">物理演算</span>
         </div>
       </a>
 

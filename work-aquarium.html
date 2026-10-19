@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>実写素材でつくるインタラクティブ水槽システム | yoshi Portfolio</title>
+  <meta name="description" content="実写素材をスプライト化し、魚の泳ぎや旋回、海草の揺れ、水中の光をCanvasで表現したインタラクティブ水槽。素材追加パイプラインと壁紙版も制作。">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="yoshi Portfolio">
+  <meta property="og:title" content="実写素材でつくるインタラクティブ水槽システム | yoshi Portfolio">
+  <meta property="og:description" content="実写の魚やサンゴを自由に配置できる、Canvasベースのインタラクティブ水槽。">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>try{if(!sessionStorage.getItem('introSeen')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro-pending')}catch(e){}</script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">degitail</a>
+    <button class="nav-burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav">
+      <a href="index.html" class="nav-link">Top</a>
+      <a href="works.html" class="nav-link active">Works</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="about.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="detail-inner">
+    <div class="detail-item">
+      <div class="detail-visual">
+        <div class="visual photo">
+          <video src="assets/aquarium.mp4" poster="assets/aquarium-thumb.png" autoplay muted loop playsinline controls aria-label="実写素材でつくるインタラクティブ水槽システムのデモ動画"></video>
+          <span class="num serif">06</span>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="work-meta">Work 06 — Interactive Art / Web App</div>
+        <h2>実写素材でつくるインタラクティブ水槽システム</h2>
+        <div class="role">個人開発（企画・素材制作パイプライン構築・アニメーション実装・配布形式設計）</div>
+        <p>実写の魚や海草、サンゴを自由に配置し、自分だけの景観をつくれるブラウザ水槽です。配置した魚は水槽内を泳ぎ、ドラッグで移動、右クリックで削除できます。エサをまくと魚が最寄りの粒へ集まり、食べ終えると再び通常の遊泳へ戻ります。</p>
+        <p>魚の写真を縦方向のスライスに分け、尾に近い部分ほど変位を大きくすることで、体をうねらせる動きを表現しました。旋回時には体の厚みを考慮した擬似3D投影とし、海草やサンゴも根元を固定したまま先端ほど大きく揺らしています。背景には陽光、コースティクス、マリンスノー、気泡、ビネットを重ね、水中らしい奥行きを構成しています。</p>
+        <p>素材制作にはColab上のパイプラインを用意しました。Wikimedia Commonsからライセンス条件を満たす候補を収集・採点し、人が写真を選択した後、背景除去、傾き補正、品質チェック、動作パラメータ算出、マニフェスト生成までを自動化しています。公開用には画像を埋め込んだ単一HTMLと、Lively Wallpaper向けパッケージを書き出せます。</p>
+        <ul class="feat-list">
+          <li>魚・海草・サンゴの選択配置、ドラッグ移動、右クリック削除</li>
+          <li>魚が餌の粒へ向かって集まり、捕食するインタラクション</li>
+          <li>実写スプライトの分割描画による魚体のうねり表現</li>
+          <li>体の厚みと旋回時のしなりを加えた擬似3Dターン</li>
+          <li>根元を固定し、先端ほど大きく動かす海草・サンゴの揺れ</li>
+          <li>陽光、コースティクス、マリンスノー、気泡による水中演出</li>
+          <li>描画負荷の低下を検知する自動軽量モード</li>
+          <li>素材収集から切り抜き、マニフェスト生成まで行うColabパイプライン</li>
+        </ul>
+        <div class="tech-row">
+          <span class="tech">HTML5 Canvas</span>
+          <span class="tech">JavaScript</span>
+          <span class="tech">Python</span>
+          <span class="tech">Google Colab</span>
+          <span class="tech">Pillow</span>
+          <span class="tech">rembg</span>
+          <span class="tech">SciPy</span>
+          <span class="tech">Lively Wallpaper</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="detail-pager">
+  <a href="work-shorts.html">&larr; Prev</a>
+  <a href="works.html" class="back">All Works</a>
+  <a href="work-reservation-ai.html">Next &rarr;</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">yoshi</a>
+    <nav class="footer-nav">
+      <a href="index.html">Top</a>
+      <a href="works.html">Works</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>Individual Developer Portfolio</span>
+    <span>&copy; 2026 yoshi. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
